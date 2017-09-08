@@ -7,7 +7,7 @@ import sys
 from ctypes import byref, pointer
 from ctypes.util import find_library
 
-ALL = ['ph_dct_imagehash', 'ph_dct_videohash', 'ph_image_digest', 'image_digest', 'cross_correlation']
+ALL = ['ph_dct_imagehash', 'ph_image_digest', 'image_digest', 'cross_correlation']
 
 FS_ENCODING = sys.getfilesystemencoding()
 
@@ -51,9 +51,9 @@ ph_dct_imagehash = libphash.ph_dct_imagehash
 ph_dct_imagehash.restype = ctypes.c_int
 ph_dct_imagehash.argtypes = [ctypes.c_char_p, ctypes.POINTER(ctypes.c_ulonglong)]
 
-ph_dct_videohash = libphash.ph_dct_videohash
-ph_dct_videohash.restype = ctypes.POINTER(ctypes.c_ulonglong)
-ph_dct_videohash.argtypes = [ctypes.c_char_p, ctypes.c_int]
+# ph_dct_videohash = libphash.ph_dct_videohash
+# ph_dct_videohash.restype = ctypes.POINTER(ctypes.c_ulonglong)
+# ph_dct_videohash.argtypes = [ctypes.c_char_p, ctypes.c_int]
 
 # ph_audiohash = libphash.ph_dct_audiohash
 # ph_audiohash.restype = ctypes.POINTER(ctypes.c_int32)
